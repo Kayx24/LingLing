@@ -1,0 +1,50 @@
+.content {
+    margin-left: 270px;
+    padding: 40px;
+    font-family: 'Segoe UI', sans-serif;
+  }  
+  
+  .section-title {
+    background: linear-gradient(to right, #000000, #888888, #f0f0f0);
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  
+  .section img {
+    &#img13{
+        max-width: 50%;
+    }
+
+    &#img14{
+        max-width: 50%;
+    }
+
+    &#img15{
+        max-width: 50%;
+    }
+
+    &#img16{
+        max-width: 50%;
+    }
+
+    &#img19{
+        max-width: 50%;
+    }
+
+    &#img20{
+        max-width: 50%;
+    }
+
+    &#img23{
+        max-width: 50%;
+    }
+
+    &#img24{
+        max-width: 50%;
+    }
+  }
