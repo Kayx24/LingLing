@@ -1,0 +1,68 @@
+/* 1. Chia layout bằng flex */
+.container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* 2. Sidebar bên trái */
+  .sidebar {
+    width: 250px;
+    background-color: #111;
+    color: white;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* 3. Phần video bên phải (không đè lên sidebar) */
+  .video-section {
+    flex: 1; /* chiếm toàn bộ phần còn lại */
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* căn giữa ngang */
+    justify-content: center; /* căn giữa dọc */
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* 4. Khung video đẹp */
+  .video-wrapper {
+    margin-left: 15%;
+    width: 80%;
+    max-width: 960px;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* 5. Iframe video full */
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  
+  .video-wrapper + .video-wrapper {
+    margin-top: 40px;
+  }
+  
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .gif-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gif-img {
+    margin-left: 19%;
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
