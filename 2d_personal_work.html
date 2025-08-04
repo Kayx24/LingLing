@@ -10,19 +10,28 @@
   <div class="container">
 
     <!-- LEFT SIDEBAR -->
-<aside class="sidebar">
-  <div class="logo">
-    <img src="img/Giaman1.png" alt="Gia Man Logo" class="logo-img">
-
-    <div class="tag-buttons">
-      <a href="2d_personal_work.html">2D PERSONAL WORK</a>
-      <a href="bathhouse.html">LILI'S BATHHOUSE</a>
-      <a href="modelling.html">3D MODELLING</a>
-      <a href="animation.html">BASIC ANIMATION/ANIMATIC </a>
-      <a href="askkingdice.html">ASK KING DICE (SHAVS MEDIA PRODUCTION)</a>
-    </div>
-  </div>
-</aside>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="img/Giaman1.png" alt="Gia Man Logo" class="logo-img">
+    
+        <div class="tag-buttons">
+          <a href="2d_personal_work.html">2D PERSONAL WORK</a>
+          <a href="bathhouse.html">LILI'S BATHHOUSE</a>
+          <a href="modelling.html">3D MODELLING</a>
+          <a href="animation.html">BASIC ANIMATION/ANIMATIC </a>
+          <a href="askkingdice.html">ASK KING DICE (SHAVS MEDIA PRODUCTION)</a>
+        </div>
+    
+        <!-- 🎵 MUSIC PLAYER -->
+        <!-- <div class="music-player">
+          <img src="img/2d/nhac.jpg" alt="Rotating Disc" class="rotating-disc" id="disc">
+          <audio id="audio" controls>
+            <source src="img/2d/Memory by Keith Holden.mp3" type="audio/mp3">
+            Your browser does not support the audio tag.
+          </audio>
+        </div> -->
+      </div>
+    </aside>
 
   
     <!-- RIGHT CONTENT AREA -->
@@ -128,6 +137,22 @@
         });
       });
     });
+
+    const audio = document.getElementById('audio');
+    const disc = document.getElementById('disc');
+
+    audio.addEventListener('play', () => {
+      disc.classList.add('spin');
+    });
+
+    audio.addEventListener('pause', () => {
+      disc.classList.remove('spin');
+    });
+
+    audio.addEventListener('ended', () => {
+      disc.classList.remove('spin');
+    });
+
   </script>  
   
 </body>

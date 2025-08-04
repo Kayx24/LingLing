@@ -208,3 +208,31 @@
     color: #555;
     font-style: italic;
   }
+
+  /* 🎵 MUSIC PLAYER STYLE */
+.music-player {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.rotating-disc {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Chỉ quay khi có class 'spin' */
+.spin {
+  animation: rotateDisc 4s linear infinite;
+}
+
+@keyframes rotateDisc {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.music-player audio {
+  width: 100%;
+}
