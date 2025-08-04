@@ -177,3 +177,15 @@
     margin-bottom: 40px;
   }
   
+  .container_img1 img,
+  .section img {
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+  
+  .container_img1 img:hover,
+  .section img:hover {
+    transform: scale(1.05);
+    z-index: 10;
+  }
+  

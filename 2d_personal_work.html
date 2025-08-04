@@ -95,5 +95,38 @@
 
   </div>
 
+  <script>
+    document.querySelectorAll("img").forEach(img => {
+      img.addEventListener("click", () => {
+        const overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = "100vw";
+        overlay.style.height = "100vh";
+        overlay.style.background = "rgba(0, 0, 0, 0.9)";
+        overlay.style.display = "flex";
+        overlay.style.alignItems = "center";
+        overlay.style.justifyContent = "center";
+        overlay.style.zIndex = 9999;
+  
+        const zoomedImg = document.createElement("img");
+        zoomedImg.src = img.src;
+        zoomedImg.style.maxWidth = "90%";
+        zoomedImg.style.maxHeight = "90%";
+        zoomedImg.style.borderRadius = "8px";
+        zoomedImg.style.boxShadow = "0 0 30px rgba(255, 255, 255, 0.2)";
+        zoomedImg.style.cursor = "zoom-out";
+  
+        overlay.appendChild(zoomedImg);
+        document.body.appendChild(overlay);
+  
+        overlay.addEventListener("click", () => {
+          overlay.remove();
+        });
+      });
+    });
+  </script>  
+  
 </body>
 </html>
