@@ -13,13 +13,13 @@
     box-sizing: border-box;
   }
   
-  /* 3. Phần video bên phải (không đè lên sidebar) */
+  /* 3. Phần video bên phải  */
   .video-section {
-    flex: 1; /* chiếm toàn bộ phần còn lại */
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    align-items: center;     /* căn giữa ngang */
-    justify-content: center; /* căn giữa dọc */
+    align-items: center;  
+    justify-content: center; 
     background-color: #ffffff;
     padding: 40px 20px;
     box-sizing: border-box;

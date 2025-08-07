@@ -4,30 +4,81 @@
   <meta charset="UTF-8">
   <title>Your Portfolio</title>
   <link rel="stylesheet" href="css/2d.css">
+  <link rel="stylesheet" href="css/askking.css">
 </head>
 <body>
 
   <div class="container">
 
     <!-- LEFT SIDEBAR -->
-<aside class="sidebar">
-  <div class="logo">
-    <img src="img/Giaman1.png" alt="Gia Man Logo" class="logo-img">
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="img/Giaman1.png" alt="Gia Man Logo" class="logo-img">
 
-    <div class="tag-buttons">
-      <a href="2d_personal_work.html">2D PERSONAL WORK</a>
-      <a href="bathhouse.html">LILI'S BATHHOUSE</a>
-      <a href="modelling.html">3D MODELLING</a>
-      <a href="animation.html">BASIC ANIMATION/ANIMATIC </a>
-      <a href="askkingdice.html">ASK KING DICE (SHAVS MEDIA PRODUCTION)</a>
+      <div class="tag-buttons">
+        <a href="2d_personal_work.html">2D PERSONAL WORK</a>
+        <a href="bathhouse.html">LILI'S BATHHOUSE</a>
+        <a href="modelling.html">3D MODELLING</a>
+        <a href="animation.html">BASIC ANIMATION/ANIMATIC </a>
+        <a href="askkingdice.html">ASK KING DICE (SHAVS MEDIA PRODUCTION)</a>
+      </div>
     </div>
-  </div>
-</aside>
+  </aside>
 
+  <main class="content">
+    <section class="section">
+      <div class="container_img1">
+        <img src="img/bathhouse/Staff.png" alt="Art Sample" id="img36">
+      </div>
+      <div style="text-align: center; margin-top: 10px; ">
+        <p>Lili's Bathhouse: Staff designs</p> 
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container_img1">
+        <img src="img/bathhouse/Bathtub_variations.png" alt="Art Sample" id="img37">
+      </div>
+      <div style="text-align: center; margin-top: 10px; ">
+        <p>Lili's Bathhouse: Bathtub  designs</p> 
+      </div>
+    </section>
+
+  </main>
+  </div>
+
+  <script>
+    document.querySelectorAll("img").forEach(img => {
+      img.addEventListener("click", () => {
+        const overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = "100vw";
+        overlay.style.height = "100vh";
+        overlay.style.background = "rgba(0, 0, 0, 0.9)";
+        overlay.style.display = "flex";
+        overlay.style.alignItems = "center";
+        overlay.style.justifyContent = "center";
+        overlay.style.zIndex = 9999;
   
-    
-
-  </div>
-
+        const zoomedImg = document.createElement("img");
+        zoomedImg.src = img.src;
+        zoomedImg.style.maxWidth = "90%";
+        zoomedImg.style.maxHeight = "90%";
+        zoomedImg.style.borderRadius = "8px";
+        zoomedImg.style.boxShadow = "0 0 30px rgba(255, 255, 255, 0.2)";
+        zoomedImg.style.cursor = "zoom-out";
+  
+        overlay.appendChild(zoomedImg);
+        document.body.appendChild(overlay);
+  
+        overlay.addEventListener("click", () => {
+          overlay.remove();
+        });
+      });
+    });
+  </script>  
+  
 </body>
 </html>
